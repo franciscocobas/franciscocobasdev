@@ -4,6 +4,9 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {},
+    fontFamily: {
+      body: ['NotoSans'],
+    },
   },
   variants: {
     extend: {},

@@ -1,18 +1,59 @@
 import Head from 'next/head';
+import { GetStaticProps } from 'next';
+import { useRouter } from 'next/dist/client/router';
 
-export default function Home() {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return locale === 'en'
+    ? {
+        props: {
+          title: 'Brief introduction',
+          description: `Hello, this is Francisco Cobas. I'm a web developer with more than 8 years of experiencie.
+            I ❤️ Javascript. My recent projects were develop using ReactJS and Typescript, also I have experience in the backend with
+            NodeJS and Express. 
+            `,
+        },
+      }
+    : {
+        props: {
+          title: 'Breve introducción',
+          description: `
+            Hola, mi nombre es Francisco Cobas. Soy programador web con más de 8 años de experiencia en la industria. 
+            Principalmente estoy enfocado en el lenguaje Javascript, tengo experiencia en el Backend trabajando con NodeJS y Express, 
+            y más experiencia trabajando en el Frontend con ReactJS como principal tecnología.
+          `,
+        },
+      };
+};
+
+interface HomeProps {
+  description: string;
+  title: string;
+}
+
+export default function Home({ description, title }: HomeProps) {
+  const { locale } = useRouter();
+
   return (
     <>
       <Head>
-        <title>Francisco Cobas Dev</title>
+        <title>
+          {locale === 'en'
+            ? 'Welcome to Francisco Cobas Dev'
+            : 'Bienvenido a Francisco Cobas Dev'}
+        </title>
       </Head>
-      <div className='bg-white dark:bg-gray-800 dark:text-white min-h-screen flex items-center justify-center'>
-        <h1>Hello, this is Francisco Cobas</h1>
-        <img
-          src='/images/FranciscoProfile.webp'
-          alt='Francisco Cobas Foto de perfil'
-          className='rounded-full w-80 h-80 shadow-xl'
-        />
+      <div className='bg-white dark:bg-gray-800 dark:text-white min-h-screen flex items-center justify-center px-32'>
+        <div className='md:w-1/2'>
+          <h1 className='text-4xl mb-4'>{title}</h1>
+          <p>{description}</p>
+        </div>
+        <div className='md:w-1/2 flex justify-center'>
+          <img
+            src='/images/FranciscoProfile.webp'
+            alt='Francisco Cobas Foto de perfil'
+            className='rounded-full w-80 h-80 dark:shadow-white'
+          />
+        </div>
       </div>
     </>
   );

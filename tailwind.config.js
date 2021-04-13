@@ -10,9 +10,14 @@ module.exports = {
     fontFamily: {
       body: ['NotoSans'],
     },
+    boxShadow: {
+      white: '0 0 3rem 0 #ffffff75',
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      boxShadow: ['dark'],
+    },
   },
   plugins: [],
 };

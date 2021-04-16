@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/dist/client/router';
 
@@ -48,10 +49,11 @@ export default function Home({ description, title }: HomeProps) {
           <p>{description}</p>
         </div>
         <div className='md:w-1/2 flex justify-center'>
-          <img
+          <Image
             src='/images/FranciscoProfile.webp'
-            alt='Francisco Cobas Foto de perfil'
-            className='rounded-full w-80 h-80 dark:shadow-white'
+            width='400'
+            height='400'
+            className='rounded-full dark:shadow-white'
           />
         </div>
       </div>

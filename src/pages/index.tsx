@@ -53,7 +53,7 @@ export default function Home({ description, title }: HomeProps) {
             src='/images/FranciscoProfile.webp'
             width='400'
             height='400'
-            className='rounded-full dark:shadow-white'
+            className='rounded-full'
           />
         </div>
       </div>

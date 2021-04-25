@@ -23,3 +23,12 @@ a {
   font-family: 'NotoSans';
   src: url('/fonts/NotoSansJP-Regular.otf');
 }
+#icons-container {
+  position: relative;
+  top: 0;
+  left: 4.7rem;
+}
+#ball {
+  position: relative;
+  left: 5rem;
+}

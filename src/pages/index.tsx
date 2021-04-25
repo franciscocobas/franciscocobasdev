@@ -12,6 +12,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
             I ❤️ Javascript. My recent projects were develop using ReactJS and Typescript, also I have experience in the backend with
             NodeJS and Express. 
             `,
+          message: 'For a better experience',
         },
       }
     : {
@@ -22,6 +23,9 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
             Principalmente estoy enfocado en el lenguaje Javascript, tengo experiencia en el Backend trabajando con NodeJS y Express, 
             y más experiencia trabajando en el Frontend con ReactJS como principal tecnología.
           `,
+          message:
+            'Para una experiencia más entretenida, podés escribir tu nombre en el siguiente campo de texto:',
+          messageAux: 'Disclaimer: No se guardará ningún dato.',
         },
       };
 };

@@ -1,6 +1,6 @@
 name: Merge PR with scheduler
 on:
-  shedule:
+  schedule:
     - cron: '30 18 * * *'
 jobs:
   label_issues:

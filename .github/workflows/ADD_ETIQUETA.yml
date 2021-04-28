@@ -1,7 +1,7 @@
 name: Merge PR with scheduler
 on:
   schedule:
-    - cron: '30 18 * * *'
+    - cron: '35 18 * * *'
 jobs:
   label_issues:
     runs-on: ubuntu-latest

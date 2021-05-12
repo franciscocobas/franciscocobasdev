@@ -65,18 +65,23 @@ export default function Home({
             : 'Bienvenido a Francisco Cobas Dev'}
         </title>
       </Head>
-      <div className='bg-white dark:bg-gray-800 dark:text-white min-h-screen flex items-center justify-center px-32'>
-        <div className='md:w-1/2'>
-          <h1 className='text-4xl mb-4'>{title}</h1>
-          <p>{description}</p>
-        </div>
-        <div className='md:w-1/2 flex justify-center'>
-          <Image
-            src='/images/FranciscoProfile.webp'
-            width='400'
-            height='400'
-            className='rounded-full'
-          />
+      <div className='bg-white dark:bg-gray-800  dark:text-white'>
+        <div
+          style={{ maxWidth: '1100px' }}
+          className='py-12 md:pt-36 mx-12 md:mx-auto flex items-center justify-center flex-col-reverse md:flex-row'
+        >
+          <div className='md:w-1/2 mt-8 md:mt-0'>
+            <h1 className='text-4xl mb-4'>{title}</h1>
+            <p>{description}</p>
+          </div>
+          <div className='md:w-1/2 flex justify-center px-12'>
+            <Image
+              src='/images/FranciscoProfile.webp'
+              width='400'
+              height='400'
+              className='rounded-full'
+            />
+          </div>
         </div>
       </div>
     </>

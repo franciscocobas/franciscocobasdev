@@ -1,9 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { useForm } from 'react-hook-form';
-
-import { GetStaticProps } from 'next';
 import { useRouter } from 'next/dist/client/router';
+import { GetStaticProps } from 'next';
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return locale === 'en'
@@ -66,10 +65,6 @@ export default function Home({
             : 'Bienvenido a Francisco Cobas Dev'}
         </title>
       </Head>
-      <div>
-        <p>{message}</p>
-        <p>{messageAux}</p>
-      </div>
       <div className='bg-white dark:bg-gray-800 dark:text-white min-h-screen flex items-center justify-center px-32'>
         <div className='md:w-1/2'>
           <h1 className='text-4xl mb-4'>{title}</h1>

@@ -17,6 +17,7 @@ module.exports = {
   variants: {
     extend: {
       boxShadow: ['dark'],
+      margin: ['dark'],
     },
   },
   plugins: [],

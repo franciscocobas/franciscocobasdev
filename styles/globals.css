@@ -25,10 +25,5 @@ a {
 }
 #icons-container {
   position: relative;
-  top: 0;
-  left: 4.7rem;
-}
-#ball {
-  position: relative;
-  left: 5rem;
+  left: 4rem;
 }
